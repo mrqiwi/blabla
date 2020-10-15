@@ -1,0 +1,92 @@
+Module                  Size  Used by
+rfcomm                 81920  16
+ccm                    20480  9
+bnep                   24576  2
+hid_generic            16384  0
+usbhid                 57344  0
+hid                   131072  2 usbhid,hid_generic
+binfmt_misc            24576  1
+uvcvideo               98304  0
+videobuf2_vmalloc      20480  1 uvcvideo
+videobuf2_memops       20480  1 videobuf2_vmalloc
+videobuf2_v4l2         24576  1 uvcvideo
+videobuf2_common       49152  2 videobuf2_v4l2,uvcvideo
+videodev              225280  3 videobuf2_v4l2,uvcvideo,videobuf2_common
+snd_hda_codec_hdmi     61440  1
+ath5k                 151552  0
+mc                     53248  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_common
+btusb                  57344  0
+snd_hda_codec_conexant    28672  1
+btrtl                  24576  1 btusb
+btbcm                  16384  1 btusb
+snd_hda_codec_generic    81920  1 snd_hda_codec_conexant
+btintel                24576  1 btusb
+ledtrig_audio          16384  2 snd_hda_codec_generic,snd_hda_codec_conexant
+ath                    36864  1 ath5k
+bluetooth             581632  37 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+ecdh_generic           16384  1 bluetooth
+ecc                    28672  1 ecdh_generic
+snd_hda_intel          53248  3
+mac80211              843776  1 ath5k
+snd_intel_dspcfg       24576  1 snd_hda_intel
+snd_hda_codec         131072  4 snd_hda_codec_generic,snd_hda_codec_conexant,snd_hda_codec_hdmi,snd_hda_intel
+cfg80211              704512  3 ath,ath5k,mac80211
+snd_hda_core           90112  5 snd_hda_codec_generic,snd_hda_codec_conexant,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec
+snd_hwdep              20480  1 snd_hda_codec
+snd_pcm               106496  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+libarc4                16384  1 mac80211
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+joydev                 24576  0
+input_leds             16384  0
+coretemp               20480  0
+toshiba_acpi           53248  0
+snd_rawmidi            36864  1 snd_seq_midi
+sparse_keymap          16384  1 toshiba_acpi
+serio_raw              20480  0
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+industrialio           73728  1 toshiba_acpi
+wmi_bmof               16384  0
+toshiba_bluetooth      20480  0
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              36864  2 snd_seq,snd_pcm
+snd                    90112  17 snd_hda_codec_generic,snd_seq,snd_hda_codec_conexant,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm,snd_rawmidi
+soundcore              16384  1 snd
+mac_hid                16384  0
+sch_fq_codel           20480  6
+parport_pc             40960  0
+ppdev                  24576  0
+lp                     20480  0
+parport                53248  3 parport_pc,lp,ppdev
+ip_tables              32768  0
+x_tables               40960  1 ip_tables
+autofs4                45056  2
+btrfs                1253376  0
+xor                    24576  1 btrfs
+zstd_compress         167936  1 btrfs
+raid6_pq              114688  1 btrfs
+libcrc32c              16384  1 btrfs
+dm_mirror              24576  0
+dm_region_hash         20480  1 dm_mirror
+dm_log                 20480  2 dm_region_hash,dm_mirror
+i915                 1986560  9
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        184320  1 i915
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+sdhci_pci              53248  0
+cqhci                  28672  1 sdhci_pci
+firewire_ohci          40960  0
+psmouse               155648  0
+i2c_i801               32768  0
+sky2                   65536  0
+drm                   491520  8 drm_kms_helper,i915
+firewire_core          65536  1 firewire_ohci
+sdhci                  65536  1 sdhci_pci
+lpc_ich                24576  0
+crc_itu_t              16384  1 firewire_core
+pata_acpi              16384  0
+wmi                    32768  2 toshiba_acpi,wmi_bmof
+video                  49152  2 toshiba_acpi,i915
